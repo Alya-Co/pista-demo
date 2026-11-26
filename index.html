@@ -63,7 +63,7 @@ main{padding-block:20px 50px}
 .card{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);padding:18px;min-width:0;border:1px solid var(--line)}
 .eyebrow{font-size:.85rem;font-weight:700;color:var(--muted)}
 .hero{width:92px;height:92px;flex:0 0 auto}
-@media (max-width:600px){.hero{width:70px;height:70px}.kid>div:nth-child(2),.dhead>div:nth-child(2){flex:1 1 calc(100% - 90px)}}
+@media (max-width:600px){.hero{width:70px;height:70px}.kid>.khd,.dhead>.khd{flex:1 1 calc(100% - 90px)}.kid .seg{display:flex;width:100%}.kid .seg button{flex:1}}
 .bob{animation:bob 3.2s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 @keyframes pop{0%{transform:scale(.7);opacity:0}70%{transform:scale(1.05)}100%{transform:scale(1);opacity:1}}
@@ -184,6 +184,7 @@ main{padding-block:20px 50px}
 .seg button{border:none;background:none;padding:7px 18px;border-radius:10px;font-weight:800;color:var(--muted)}
 .seg button[aria-pressed="true"]{background:var(--primary);color:#fff}
 .kid{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.khd{min-width:0;flex:1}
 .kid h1{font-size:clamp(1.4rem,3.4vw,1.9rem)}
 .pgrid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px;align-items:start}
 @media (max-width:900px){.pgrid{grid-template-columns:1fr}}
@@ -338,7 +339,7 @@ main{padding-block:20px 50px}
 <section id="s-diccionario" class="screen" hidden>
   <div class="card"><div class="dhead">
     <div class="hero bob" id="heroTinta"></div>
-    <div style="min-width:0;flex:1"><h1 data-i="tab2"></h1><div class="meter"><i id="dictMeter"></i></div><div class="fine" id="dictTxt" style="margin-top:4px"></div></div>
+    <div class="khd"><h1 data-i="tab2"></h1><div class="meter"><i id="dictMeter"></i></div><div class="fine" id="dictTxt" style="margin-top:4px"></div></div>
   </div></div>
   <div class="tiles" id="tiles"></div>
   <div class="row" style="justify-content:center"><button class="btn pri" id="flipAll" data-i="repasar"></button></div>
@@ -347,7 +348,7 @@ main{padding-block:20px 50px}
 <section id="s-panel" class="screen" hidden>
   <div class="card"><div class="kid">
     <div class="hero" id="heroRumbo"></div>
-    <div style="min-width:0;flex:1"><div class="eyebrow" id="pEy"></div><h1 id="pTitle"></h1></div>
+    <div class="khd"><div class="eyebrow" id="pEy"></div><h1 id="pTitle"></h1></div>
     <div class="seg" role="group"><button id="vFam" aria-pressed="true" data-i="vFam"></button><button id="vDoc" aria-pressed="false" data-i="vDoc"></button></div>
   </div></div>
   <div id="panelFam" class="screen"></div>
